@@ -8,25 +8,29 @@ function Index() {
         {
             id: 1,
             name: 'mango',
-            image:'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-mango.jpg'
+            image:'https://befreshcorp.net/wp-content/uploads/2017/07/product-packshot-mango.jpg',
+            price: 12.48
         },
         {
             id: 2,
             name: 'grapes',
-            image: 'https://www.fourwindsgrowers.com/cdn/shop/products/blackmonukka_1024x1024.jpg?v=1538780984'
+            image: 'https://www.fourwindsgrowers.com/cdn/shop/products/blackmonukka_1024x1024.jpg?v=1538780984',
+            price: 11.40
         },
         {
             id: 3,
             name: 'banana',
-            image: 'https://cdn.shoppub.io/cdn-cgi/image/w=600,h=600,q=80,f=auto/cenourao/media/uploads/produtos/foto/67dc8df0dbe6file.png'
+            image: 'https://cdn.shoppub.io/cdn-cgi/image/w=600,h=600,q=80,f=auto/cenourao/media/uploads/produtos/foto/67dc8df0dbe6file.png',
+            price: 13.54
         }
 
     ]
 
-    const renderProduct = ({item}) => (
-        <ProductItem name={item.name} image={item.image}/>
-    )
 
+
+    const renderProduct = ({item}) => (
+        <ProductItem name={item.name} image={item.image} price={item.price}/>
+    )
     return(
         <View style={styles.containerIndex}>
             <H1>Produtos</H1>
@@ -51,6 +55,7 @@ const styles = StyleSheet.create({
     list: {
         backgroundColor: '#000',
         justifyContent: 'center',
+        alignItems: 'center',
     }
 })
 
